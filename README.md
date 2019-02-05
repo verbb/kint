@@ -35,43 +35,51 @@ No configuration required, but you can set the theme that Kint will use within t
 
 ## Using Kint
 
+- Click anywhere on the bar to unfold it
+- Double click + to unfold all children
+- Press d to toggle keyboard navigation.
+- Press the “⇄” icon on the right to see what code you’d need to use to get at a piece of data.
+- Press the “⌕” icon on the right to open a live search.
+- Change tabs to see different views of data.
+- You can sort tables of data by clicking on the headers.
+
 ### Templating
 
 #### d (dump)
 
-`{{ d(someTwigVariable) }}`
+`{{ d(entry) }}` or `{{ d(entry, otherEntry) }}`
 
 This is the simplest usage, and will output an interactive debugger for the variable passed in.
 
 #### j (dump - console.log())
 
-`{{ j(someTwigVariable) }}`
+`{{ j(entry) }}` or `{{ j(entry, otherEntry) }}`
 
 This is the same as `d`, except all output will be sent to `console.log()`
 
-#### dd (dump and die)
-
-`{{ dd(someTwigVariable) }}`
-
-This works the same way as the d (dump) command, except it will cause output to end immediately after the debugger is returned.
-
 #### s (simple dump)
 
-`{{ s(someTwigVariable) }}`
+`{{ s(someTwigVariable) }}` or `{{ s(entry, otherEntry) }}`
 
 This works essentially the same way as the built-in Twig dump method, and returns a plain text debugging output.
 
-#### sd (simple dump and die)
+#### microtime (point-in-time memory usage and timestamp)
 
-`{{ sd(someTwigVariable) }}`
-
-Same as above, but with output ending immediately after the plain text debugging output is returned.
-
-#### time (point-in-time memory usage and timestamp)
-
-`{{ time() }}`
+`{{ microtime() }}` and `{{ microtime(true) }}` to reset the counter
 
 Basic reporting of memory usage at the time that the command is run, as well as a timestamp. If used multiple times,
-it will also report the time since it was last called and average duration.
+it will also report the time since it was last called and average duration. Passing `true` as an argument will reset the counter.
+
+#### trace (backtrace)
+
+`{{ trace() }}`
+
+Outputs a PHP backtrace from the point at which the function is called - note, this function uses quite a bit of memory
+(you should likely set `memory_limit 512M`, and the output might not be all that helpful, as you are mostly going to be
+seeing compiled PHP from the Twig templates.
+
+## Credit
+
+* Thank you to Rokas Šleinius, the developer of Kint - he welcomes donations at [Kint's website](http://raveren.github.io/kint/)
 
 Brought to you by [Mildly Geeky, Inc.](https://mildlygeeky.com)

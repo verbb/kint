@@ -2,7 +2,7 @@
 /**
  * Kint plugin for Craft CMS 3.x
  *
- * Kint. For Craft. Finally.
+ * Adds Kint, an in-app PHP debugger, to Craft CMS 3.x for use in Twig and PHP.
  *
  * @link      https://mildlygeeky.com
  * @copyright Copyright (c) 2019 Mildly Geeky, Inc.
