@@ -1,0 +1,17 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{% import '_includes/forms' as forms %}
+
+{{ forms.selectField({
+  label: "Display Theme",
+  id: 'kintDisplayTheme',
+  name: 'kintDisplayTheme',
+  options: {
+    'original.css': 'Original',
+    'solarized.css': 'Solarized',
+    'solarized-dark.css': 'Solarized Dark',
+    'aante-light.css': 'Aante Light'
+  },
+  default: 'original.css',
+  value: settings.kintDisplayTheme,
+  first: true
+}) }}
