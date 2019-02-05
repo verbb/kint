@@ -24,7 +24,7 @@ To install the plugin, follow these instructions.
 
 ## Kint Overview
 
-Kint is an interactive debugger for PHP applications. Full documentation is available at http://raveren.github.io/kint/.
+Kint is an interactive debugger for PHP applications. Full documentation is available at https://github.com/kint-php/kint/.
 
 Its advantages include that it can be run out of devMode (though you would not want to use it in a public setting), and
 it is interactive, with keyboard shortcuts to expand and collapse objects, separates content from methods, etc.
