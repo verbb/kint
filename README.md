@@ -80,6 +80,6 @@ seeing compiled PHP from the Twig templates.
 
 ## Credit
 
-* Thank you to Rokas Šleinius, the developer of Kint - he welcomes donations at [Kint's website](http://raveren.github.io/kint/)
+* Thank you to Jonathan Vollebregt and Rokas Šleinius, the developers behind [Kint](https://github.com/kint-php/kint/)
 
 Brought to you by [Mildly Geeky, Inc.](https://mildlygeeky.com)
