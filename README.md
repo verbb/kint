@@ -1,3 +1,7 @@
+# Deprecated #
+
+Craft Kint has found a new owner with [Verbb](https://verbb.io/)!
+
 # Kint plugin for Craft CMS 3.x
 
 Adds Kint, an in-app PHP debugger, to Craft CMS 3.x for use in Twig and PHP.
