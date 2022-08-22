@@ -1,8 +1,6 @@
 <?php
 namespace verbb\kint\base;
 
-use verbb\kint\services\Service;
-
 use Craft;
 
 use yii\log\Logger;
@@ -39,22 +37,13 @@ trait PluginTrait
     }
 
 
-    // Public Methods
-    // =========================================================================
-
-    public function getService(): Service
-    {
-        return $this->get('service');
-    }
-
-
     // Private Methods
     // =========================================================================
 
     private function _setPluginComponents(): void
     {
         $this->setComponents([
-            'service' => Service::class,
+
         ]);
 
         BaseHelper::registerModule();

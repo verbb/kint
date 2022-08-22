@@ -35,7 +35,7 @@ class Kint extends Plugin
     // Public Methods
     // =========================================================================
 
-    public function init()
+    public function init(): void
     {
         parent::init();
 
@@ -77,7 +77,7 @@ class Kint extends Plugin
         });
     }
 
-    private function _registerTwigExtensions()
+    private function _registerTwigExtensions(): void
     {
         Craft::$app->getView()->registerTwigExtension(new Extension);
         Craft::$app->getView()->registerTwigExtension(new KintTwigExtension);
