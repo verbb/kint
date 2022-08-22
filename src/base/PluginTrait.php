@@ -1,6 +1,8 @@
 <?php
 namespace verbb\kint\base;
 
+use verbb\kint\Kint;
+
 use Craft;
 
 use yii\log\Logger;
@@ -12,7 +14,7 @@ trait PluginTrait
     // Static Properties
     // =========================================================================
 
-    public static $plugin;
+    public static Kint $plugin;
 
 
     // Public Methods

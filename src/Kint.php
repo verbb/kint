@@ -22,8 +22,8 @@ class Kint extends Plugin
     // Properties
     // =========================================================================
 
-    public $schemaVersion = '1.0.0';
-    public $hasCpSettings = true;
+    public string $schemaVersion = '1.0.0';
+    public bool $hasCpSettings = true;
 
 
     // Traits
@@ -50,9 +50,9 @@ class Kint extends Plugin
         $this->_registerCpRoutes();
     }
 
-    public function getSettingsResponse()
+    public function getSettingsResponse(): mixed
     {
-        Craft::$app->getResponse()->redirect(UrlHelper::cpUrl('kint/settings'));
+        return Craft::$app->getResponse()->redirect(UrlHelper::cpUrl('kint/settings'));
     }
 
 

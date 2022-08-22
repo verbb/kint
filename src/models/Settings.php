@@ -8,6 +8,6 @@ class Settings extends Model
     // Properties
     // =========================================================================
 
-    public $kintDisplayTheme = 'original.css';
+    public string $kintDisplayTheme = 'original.css';
 
 }

@@ -44,11 +44,6 @@ it is interactive, with keyboard shortcuts to expand and collapse objects, separ
 
 This is the simplest usage, and will output an interactive debugger for the variable passed in.
 
-#### j (dump - console.log())
-`{{ j(entry) }}` or `{{ j(entry, otherEntry) }}`
-
-This is the same as `d`, except all output will be sent to `console.log()`
-
 #### s (simple dump)
 `{{ s(someTwigVariable) }}` or `{{ s(entry, otherEntry) }}`
 
