@@ -43,7 +43,7 @@ class Kint extends Plugin
 
         KintPackage::$aliases[] = 'time';
         RichRenderer::$theme = $this->getSettings()->kintDisplayTheme;
-        
+
         $this->_setPluginComponents();
         $this->_setLogging();
         $this->_registerTwigExtensions();
