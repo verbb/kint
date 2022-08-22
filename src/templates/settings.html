@@ -1,0 +1,35 @@
+{% extends 'kint/_layouts' %}
+{% import '_includes/forms' as forms %}
+
+{% set crumbs = [
+    { label: 'Kint' | t('kint'), url: url('kint/settings') },
+    { label: 'Settings' | t('app'), url: url('kint/settings') }
+] %}
+
+{% set selectedTab = 'settings' %}
+{% set fullPageForm = true %}
+
+{% block blockContent %}
+
+<input type="hidden" name="action" value="plugins/save-plugin-settings">
+<input type="hidden" name="pluginHandle" value="kint">
+
+{% namespace 'settings' %}
+
+{{ forms.selectField({
+    first: true,
+    label: 'Display Theme' | t('kint'),
+    instructions: 'Pick a theme for Kint to use.' | t('kint'),
+    name: 'kintDisplayTheme',
+    options: {
+        'original.css': 'Original' | t('kint'),
+        'solarized.css': 'Solarized' | t('kint'),
+        'solarized-dark.css': 'Solarized Dark' | t('kint'),
+        'aante-light.css': 'Aante Light' | t('kint'),
+    },
+    value: settings.kintDisplayTheme,
+}) }}
+
+{% endnamespace %}
+
+{% endblock %}

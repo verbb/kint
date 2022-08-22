@@ -1,25 +1,15 @@
 <?php
-/**
- * Kint plugin for Craft CMS 3.x
- *
- * Adds Kint, an in-app PHP debugger, to Craft CMS 3.x for use in Twig and PHP.
- *
- * @link      https://mildlygeeky.com
- * @copyright Copyright (c) 2019 Mildly Geeky, Inc.
- */
+namespace verbb\kint\twigextensions;
 
-namespace mildlygeeky\kint\twigextensions;
+use Twig_Extension;
+use Twig_SimpleFunction;
+use Twig_SimpleFilter;
+use Twig_Environment;
 
 use Kint\Kint;
 use Kint\Parser\MicrotimePlugin;
-use mildlygeeky\kint\Plugin;
 
-/**
- * @author    Mildly Geeky, Inc.
- * @package   Kint
- * @since     1.0.0
- */
-class KintTwigExtension extends \Twig_Extension
+class Extension extends Twig_Extension
 {
     // Public Methods
     // =========================================================================
@@ -38,14 +28,15 @@ class KintTwigExtension extends \Twig_Extension
     public function getFunctions()
     {
         return [
-            new \Twig_SimpleFunction('microtime', [$this, 'microtime']),
-            new \Twig_SimpleFunction('trace', [$this, 'trace']),
+            new Twig_SimpleFunction('microtime', [$this, 'microtime']),
+            new Twig_SimpleFunction('trace', [$this, 'trace']),
         ];
     }
 
     public function trace()
     {
         Kint::trace();
+
         return null;
     }
 
@@ -54,7 +45,9 @@ class KintTwigExtension extends \Twig_Extension
         if ($reset) {
             MicrotimePlugin::clean();
         }
+
         Kint::dump(microtime());
+
         return null;
     }
 }
