@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.0 - 2022-10-26
+
+### Added
+- Add the ability to set `kintSettings` and `richRendererSettings` plugin settings to control global Kint settings.
+
+### Deprecated
+- Deprecated the `kintDisplayTheme` plugin setting. Use `richRendererSettings['theme']` instead.
+
 ## 3.0.0 - 2022-08-22
 
 ### Changed

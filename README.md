@@ -37,6 +37,31 @@ it is interactive, with keyboard shortcuts to expand and collapse objects, separ
 - Change tabs to see different views of data.
 - You can sort tables of data by clicking on the headers.
 
+## Configuration
+Create a `kint.php` file under your `/config` directory with the following options available to you. You can also use multi-environment options to change these per environment.
+
+```php
+<?php
+
+return [
+    '*' => [
+        'kintSettings' => [
+            'aliases' => ['time'],
+            'depth_limit' => 7,
+            'expanded' => false,
+        ],
+        'richRendererSettings' => [
+            'theme' => 'original.css',
+        ],
+    ],
+];
+```
+
+## Configuration options
+
+- `kintSettings` - The [Kint Settings](https://kint-php.github.io/kint/settings/) to apply globally.
+- `richRendererSettings` - The [Rich Renderer Settings](https://kint-php.github.io/kint/settings/).
+
 ### Templating
 
 #### d (dump)
