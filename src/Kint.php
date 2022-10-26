@@ -41,8 +41,17 @@ class Kint extends Plugin
 
         self::$plugin = $this;
 
-        KintPackage::$aliases[] = 'time';
-        RichRenderer::$theme = $this->getSettings()->kintDisplayTheme;
+        $settings = $this->getSettings();
+
+        // Set global Kint settings
+        foreach ($settings->getKintSettings() as $key => $value) {
+            KintPackage::$$key = $value;
+        }
+
+        // Set RichRenderer settings
+        foreach ($settings->getRichRendererSettings() as $key => $value) {
+            RichRenderer::$$key = $value;
+        }
 
         $this->_setPluginComponents();
         $this->_setLogging();
