@@ -1,5 +1,8 @@
 {% extends 'kint/_layouts' %}
+
 {% import '_includes/forms' as forms %}
+
+{% requireAdmin %}
 
 {% set crumbs = [
     { label: 'Kint' | t('kint'), url: url('kint/settings') },
