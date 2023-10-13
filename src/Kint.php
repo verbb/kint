@@ -22,8 +22,8 @@ class Kint extends Plugin
     // Properties
     // =========================================================================
 
-    public string $schemaVersion = '1.0.0';
     public bool $hasCpSettings = true;
+    public string $schemaVersion = '1.0.0';
 
 
     // Traits
@@ -41,22 +41,26 @@ class Kint extends Plugin
 
         self::$plugin = $this;
 
-        $settings = $this->getSettings();
-
-        // Set global Kint settings
-        foreach ($settings->getKintSettings() as $key => $value) {
-            KintPackage::$$key = $value;
-        }
-
-        // Set RichRenderer settings
-        foreach ($settings->getRichRendererSettings() as $key => $value) {
-            RichRenderer::$$key = $value;
-        }
-
-        $this->_setPluginComponents();
-        $this->_setLogging();
         $this->_registerTwigExtensions();
-        $this->_registerCpRoutes();
+
+        if (Craft::$app->getRequest()->getIsCpRequest()) {
+            $this->_registerCpRoutes();
+        }
+
+        // Defer most setup tasks until Craft is fully initialized:
+        Craft::$app->onInit(function() {
+            $settings = $this->getSettings();
+
+            // Set global Kint settings
+            foreach ($settings->getKintSettings() as $key => $value) {
+                KintPackage::$$key = $value;
+            }
+
+            // Set RichRenderer settings
+            foreach ($settings->getRichRendererSettings() as $key => $value) {
+                RichRenderer::$$key = $value;
+            }
+        });
     }
 
     public function getSettingsResponse(): mixed

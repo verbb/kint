@@ -3,57 +3,31 @@ namespace verbb\kint\base;
 
 use verbb\kint\Kint;
 
-use Craft;
-
-use yii\log\Logger;
-
-use verbb\base\BaseHelper;
+use verbb\base\LogTrait;
+use verbb\base\helpers\Plugin;
 
 trait PluginTrait
 {
-    // Static Properties
+    // Properties
     // =========================================================================
 
-    public static Kint $plugin;
+    public static ?Kint $plugin = null;
 
 
-    // Public Methods
+    // Traits
     // =========================================================================
 
-    public static function log($message, $attributes = []): void
-    {
-        if ($attributes) {
-            $message = Craft::t('kint', $message, $attributes);
-        }
+    use LogTrait;
+    
 
-        Craft::getLogger()->log($message, Logger::LEVEL_INFO, 'kint');
-    }
-
-    public static function error($message, $attributes = []): void
-    {
-        if ($attributes) {
-            $message = Craft::t('kint', $message, $attributes);
-        }
-
-        Craft::getLogger()->log($message, Logger::LEVEL_ERROR, 'kint');
-    }
-
-
-    // Private Methods
+    // Static Methods
     // =========================================================================
 
-    private function _setPluginComponents(): void
+    public static function config(): array
     {
-        $this->setComponents([
+        Plugin::bootstrapPlugin('kint');
 
-        ]);
-
-        BaseHelper::registerModule();
-    }
-
-    private function _setLogging(): void
-    {
-        BaseHelper::setFileLogging('kint');
+        return [];
     }
 
 }
