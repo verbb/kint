@@ -37,7 +37,7 @@
     },
     "autoload": {
         "psr-4": {
-          "verbb\\kint\\": "src/"
+            "verbb\\kint\\": "src/"
         }
     },
     "extra": {
