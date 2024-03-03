@@ -30,7 +30,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "craftcms/cms": "^5.0.0-alpha.1",
+        "craftcms/cms": "^5.0.0-beta.1",
         "kint-php/kint": "^4.0",
         "kint-php/kint-twig": "^3.0",
         "verbb/base": "^3.0.0-beta.1"
