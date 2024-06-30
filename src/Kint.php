@@ -41,8 +41,6 @@ class Kint extends Plugin
 
         self::$plugin = $this;
 
-        $this->_registerTwigExtensions();
-
         if (Craft::$app->getRequest()->getIsCpRequest()) {
             $this->_registerCpRoutes();
         }
@@ -60,6 +58,9 @@ class Kint extends Plugin
             foreach ($settings->getRichRendererSettings() as $key => $value) {
                 RichRenderer::$$key = $value;
             }
+
+            // Ensure that this is also placed in the `onInit` callback so nothing is accessed before Kint is setup
+            $this->_registerTwigExtensions();
         });
     }
 

@@ -18,18 +18,18 @@ class Settings extends Model
     // Public Methods
     // =========================================================================
 
-    public function getKintSettings()
+    public function getKintSettings(): array
     {
         $defaults = ['aliases' => ['time']];
 
-        return array_merge_recursive($defaults, $this->kintSettings);
+        return array_replace_recursive($defaults, $this->kintSettings);
     }
 
-    public function getRichRendererSettings()
+    public function getRichRendererSettings(): array
     {
         $defaults = ['theme' => 'original.css'];
 
-        return array_merge_recursive($defaults, $this->richRendererSettings);
+        return array_replace_recursive($defaults, $this->richRendererSettings);
     }
 
 }
