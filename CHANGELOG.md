@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.0.1 - 2024-09-04
+
+### Fixed
+- Fix an error when dumping some Craft variables like ElementQueries.
+
 ## 4.0.0 - 2024-05-13
 
 ### Changed
