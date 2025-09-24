@@ -2,7 +2,7 @@
     "name": "verbb/kint",
     "description": "Adds Kint, an in-app PHP debugger for use in Twig and PHP.",
     "type": "craft-plugin",
-    "version": "4.0.2",
+    "version": "5.0.0-alpha.1",
     "keywords": [
         "craft",
         "cms",
@@ -29,11 +29,11 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "craftcms/cms": "^5.0.0",
+        "php": "^8.4",
+        "craftcms/cms": "6.x-dev",
         "kint-php/kint": "^4.0",
         "kint-php/kint-twig": "^3.0",
-        "verbb/base": "^3.0.0"
+        "verbb/base": "dev-craft-6"
     },
     "autoload": {
         "psr-4": {
@@ -43,7 +43,9 @@
     "extra": {
         "name": "Kint",
         "handle": "kint",
-        "changelogUrl": "https://raw.githubusercontent.com/verbb/kint/craft-5/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/kint/craft-6/CHANGELOG.md",
         "class": "verbb\\kint\\Kint"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
