@@ -1,4 +1,4 @@
-<p align="center"><img src="https://verbb.imgix.net/plugins/kint/kint-icon.svg" width="100" height="100" alt="Kint icon"></p>
+<p align="center"><img src="https://assets.verbb.io/plugins/kint/kint-icon.svg" width="100" height="100" alt="Kint icon"></p>
 <h1 align="center">Kint for Craft CMS</h1>
 
 Kint is a Craft CMS plugin that adds [Kint](https://github.com/kint-php/kint), an in-app PHP debugger for use in Twig and PHP.
