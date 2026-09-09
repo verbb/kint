@@ -1,26 +1,16 @@
-{% extends 'kint/_layouts' %}
+{% extends 'kint/_layouts/settings' %}
 
 {% import '_includes/forms' as forms %}
+{% import 'verbb-base/_macros' as macros %}
 
-{% requireAdmin %}
-
-{% set crumbs = [
-    { label: 'Kint' | t('kint'), url: url('kint/settings') },
-    { label: 'Settings' | t('app'), url: url('kint/settings') }
-] %}
-
-{% set selectedTab = 'settings' %}
 {% set fullPageForm = true %}
+{% set selectedTab = 'general' %}
+{% set pageTitle = 'General Settings' | t('kint') %}
+{% set pageAction = 'plugins/save-plugin-settings' %}
+{% set pageUrl = 'kint/settings' %}
 
-{% block blockContent %}
-
-<input type="hidden" name="action" value="plugins/save-plugin-settings">
-<input type="hidden" name="pluginHandle" value="kint">
-
-{% namespace 'settings' %}
-
+{% block settingsContent %}
 {{ forms.selectField({
-    first: true,
     label: 'Display Theme' | t('kint'),
     instructions: 'Pick a theme for Kint to use.' | t('kint'),
     name: 'kintDisplayTheme',
@@ -32,7 +22,4 @@
     },
     value: settings.kintDisplayTheme,
 }) }}
-
-{% endnamespace %}
-
 {% endblock %}
