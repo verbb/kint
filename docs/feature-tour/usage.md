@@ -1,6 +1,10 @@
 # Usage
 
-### `d()`
+Kint helps you inspect a value while developing a template. On a local entry page, temporarily add `{{ d(entry) }}` and reload it. Expand the entry in the output and find its title; then replace the dump with `{{ entry.title }}` to display that value normally.
+
+Debug output can expose content and application details. Keep it on a development installation and remove it before publishing the template. The functions below provide different views of the same data.
+
+## `d()`
 This is the simplest usage, and will output an interactive debugger for the variable passed in.
 
 ```twig
@@ -10,7 +14,7 @@ This is the simplest usage, and will output an interactive debugger for the vari
 {{ d(entry, otherEntry) }}
 ```
 
-### `s()`
+## `s()`
 This works essentially the same way as the built-in Twig dump method, and returns a plain text debugging output.
 
 ```twig
@@ -20,7 +24,7 @@ This works essentially the same way as the built-in Twig dump method, and return
 {{ s(entry, otherEntry) }}
 ```
 
-### `microtime()`
+## `microtime()`
 Basic reporting of memory usage at the time that the command is run, as well as a timestamp. If used multiple times,
 it will also report the time since it was last called and average duration. Passing `true` as an argument will reset the counter.
 
@@ -34,7 +38,7 @@ You can also reset the counter:
 {{ microtime(true) }}
 ```
 
-### `trace()`
+## `trace()`
 Outputs a PHP backtrace from the point at which the function is called - note, this function uses quite a bit of memory
 (you should likely set `memory_limit 512M`, and the output might not be all that helpful, as you are mostly going to be
 seeing compiled PHP from the Twig templates.
