@@ -4,10 +4,9 @@ Craft objects get complicated quickly, and a wall of raw output rarely makes the
 
 ## Features
 
-- **Interactive dumps:** Explore nested values without reading an unstructured wall of text.
-- **Twig helpers:** Inspect variables at the point where a Craft template uses them.
-- **PHP debugging:** Use Kint from modules, plugins, and project code.
-- **Object structure:** See properties, types, and nested data in a navigable presentation.
-- **Depth controls:** Tune how much of large values should be expanded.
-- **Environment control:** Keep debugging available for development and disabled where it should not render.
-- **Debug where you work:** Inspect values from Twig, modules, plugins and project PHP, with configuration controlling depth, display and where output is allowed.
+- Explore nested values without reading an unstructured wall of text.
+- Inspect variables at the point where a Craft template uses them.
+- Use Kint from modules, plugins, and project code.
+- See properties, types, and nested data in a navigable presentation.
+- Tune how much of large values should be expanded.
+- Keep debugging available for development and disabled where it should not render.
