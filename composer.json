@@ -1,6 +1,6 @@
 {
     "name": "verbb/kint",
-    "description": "Adds Kint, an in-app PHP debugger for use in Twig and PHP.",
+    "description": "A Craft CMS plugin that adds Kint's variable inspector to Twig and PHP.",
     "type": "craft-plugin",
     "version": "4.0.4",
     "keywords": [
