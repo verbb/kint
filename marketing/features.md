@@ -7,7 +7,7 @@ Kint brings an interactive PHP debugger to Craft development. Inspect variables 
 
 Craft objects get complicated quickly, and a wall of raw output rarely makes them clearer. Send a variable to Kint and explore its arrays, properties and types through collapsible, structured output that keeps the useful detail within reach.
 
-![Expanded Kint output showing a nested value containing a Craft entry and its publishing details.](../screenshots/output/feature-tour/kint-debugger.png)
+![Expanded Kint output showing a nested value containing a Craft entry and its publishing details.](../screenshots/kint-debugger.png)
 
 <!-- feature-section-end -->
 

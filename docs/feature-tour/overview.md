@@ -4,6 +4,8 @@ Kint is an interactive debugger for PHP applications. Full documentation is avai
 Its advantages include that it can be run out of devMode (though you would not want to use it in a public setting), and
 it is interactive, with keyboard shortcuts to expand and collapse objects, separates content from methods, etc.
 
+![An expanded value in the Kint debugger](../../screenshots/kint-debugger.png)
+
 ## Using Kint
 - Click anywhere on the bar to unfold it
 - Double click + to unfold all children
