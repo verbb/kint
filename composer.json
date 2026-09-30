@@ -2,7 +2,7 @@
     "name": "verbb/kint",
     "description": "A Craft CMS plugin that adds Kint's variable inspector to Twig and PHP.",
     "type": "craft-plugin",
-    "version": "4.0.4",
+    "version": "4.0.5",
     "keywords": [
         "craft",
         "cms",
