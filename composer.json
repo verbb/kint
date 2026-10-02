@@ -33,7 +33,7 @@
         "craftcms/cms": "^5.0.0",
         "kint-php/kint": "^4.0",
         "kint-php/kint-twig": "^3.0",
-        "verbb/base": "^3.0.18"
+        "verbb/base": "^3.0.19"
     },
     "autoload": {
         "psr-4": {

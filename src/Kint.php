@@ -3,7 +3,7 @@ namespace verbb\kint;
 
 use verbb\kint\base\PluginTrait;
 use verbb\kint\models\Settings;
-use verbb\kint\twigextensions\Extension;
+use verbb\kint\web\twig\Extension;
 
 use Craft;
 use craft\base\Plugin;

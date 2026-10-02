@@ -1,5 +1,5 @@
 <?php
-namespace verbb\kint\twigextensions;
+namespace verbb\kint\web\twig;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
