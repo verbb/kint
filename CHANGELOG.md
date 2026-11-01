@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+- Fixed the “Display Theme” setting not being applied.
+
 ## 4.0.7 - 2026-10-07
 
 ### Changed

@@ -10,8 +10,6 @@ class Settings extends Model
 
     public array $kintSettings = [];
     public array $richRendererSettings = [];
-
-    // TODO: to remove
     public string $kintDisplayTheme = 'original.css';
 
 
@@ -27,7 +25,7 @@ class Settings extends Model
 
     public function getRichRendererSettings(): array
     {
-        $defaults = ['theme' => 'original.css'];
+        $defaults = ['theme' => $this->kintDisplayTheme];
 
         return array_replace_recursive($defaults, $this->richRendererSettings);
     }
