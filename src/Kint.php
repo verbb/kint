@@ -51,7 +51,8 @@ class Kint extends Plugin
 
             // Set global Kint settings
             foreach ($settings->getKintSettings() as $key => $value) {
-                KintPackage::$$key = $value;
+                // Kint needs its own aliases to find the call site of its dump helpers
+                KintPackage::$$key = $key === 'aliases' ? array_merge(KintPackage::$aliases, $value) : $value;
             }
 
             // Set RichRenderer settings

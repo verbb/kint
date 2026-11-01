@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fixed the “Display Theme” setting not being applied.
+- Fixed `d()`, `s()` and `Kint::dump()` not showing variable names or respecting modifiers.
 
 ## 4.0.7 - 2026-10-07
 
