@@ -4,9 +4,8 @@ Craft objects get complicated quickly, and a wall of raw output rarely makes the
 
 ## Features
 
-- Explore nested values without reading an unstructured wall of text.
 - Inspect variables at the point where a Craft template uses them.
 - Use Kint from modules, plugins, and project code.
-- See properties, types, and nested data in a navigable presentation.
+- Explore properties, types and nested values in collapsible, navigable output.
 - Tune how much of large values should be expanded.
 - Keep debugging available for development and disabled where it should not render.

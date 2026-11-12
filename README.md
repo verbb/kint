@@ -7,24 +7,27 @@ Craft objects get complicated quickly, and a wall of raw output rarely makes the
 
 ## Features
 
-- Explore nested values without reading an unstructured wall of text.
 - Inspect variables at the point where a Craft template uses them.
 - Use Kint from modules, plugins, and project code.
-- See properties, types, and nested data in a navigable presentation.
+- Explore properties, types and nested values in collapsible, navigable output.
 - Tune how much of large values should be expanded.
 - Keep debugging available for development and disabled where it should not render.
 
 ## Documentation
+
 Visit the [Kint Plugin page](https://verbb.io/craft-plugins/kint) for all documentation, guides, pricing and developer resources.
 
 ## Credit & Thanks
+
 Originally created by the team at [Mildly Geeky, Inc.](https://mildlygeeky.com). Thank you to Jonathan Vollebregt and Rokas Šleinius, the developers behind [Kint](https://github.com/kint-php/kint/).
 
 ## Support
-Get in touch with us via the [Kint Support page](https://verbb.io/craft-plugins/kint/support) or by [creating a Github issue](https://github.com/verbb/kint/issues)
+
+Get in touch with us via the [Kint Support page](https://verbb.io/craft-plugins/kint/support) or by [creating a GitHub issue](https://github.com/verbb/kint/issues).
 
 ## Sponsor
-Kint is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+
+Kint is licensed under the MIT license, so it will always be free and open source. If you'd like to support it anyway, you can [sponsor its development](https://github.com/sponsors/verbb).
 
 <h2></h2>
 

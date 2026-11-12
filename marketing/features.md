@@ -14,5 +14,5 @@ Craft objects get complicated quickly, and a wall of raw output rarely makes the
 <!-- feature-section -->
 ## Debug where you work
 
-Inspect values in Twig where the front end is assembled or call the underlying library from modules, plugins and project PHP. Configuration controls the depth and presentation — and, importantly, keeps debugging output disabled where it should never appear.
+Inspect values in Twig where the front end is assembled or call the underlying library from modules, plugins and project PHP. Configuration controls the depth and presentation, and keeps debugging output disabled where it should never appear.
 <!-- feature-section-end -->
