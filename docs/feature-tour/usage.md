@@ -24,6 +24,18 @@ This works essentially the same way as the built-in Twig dump method, and return
 {{ s(entry, otherEntry) }}
 ```
 
+## `j()`
+This works the same way as `d()`, but logs the variable to your browser’s developer console instead of adding it to the page. This is handy for inspecting values without affecting your page layout.
+
+```twig
+{{ j(entry) }}
+
+{# or #}
+{{ j(entry, otherEntry) }}
+```
+
+Each variable is logged with `console.log()` as an object you can expand in the console. Like `d()`, output only appears when Craft’s `devMode` is enabled.
+
 ## `microtime()`
 Basic reporting of memory usage at the time that the command is run, as well as a timestamp. If used multiple times,
 it will also report the time since it was last called and average duration. Passing `true` as an argument will reset the counter.
