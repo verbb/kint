@@ -3,6 +3,7 @@ namespace verbb\kint;
 
 use verbb\kint\base\PluginTrait;
 use verbb\kint\models\Settings;
+use verbb\kint\renderers\ConsoleRenderer;
 use verbb\kint\twigextensions\Extension;
 
 use Craft;
@@ -88,7 +89,14 @@ class Kint extends Plugin
 
     private function _registerTwigExtensions(): void
     {
-        Craft::$app->getView()->registerTwigExtension(new Extension);
-        Craft::$app->getView()->registerTwigExtension(new KintTwigExtension);
+        $kintExtension = new KintTwigExtension();
+
+        // Kint 4 no longer ships a console renderer, so provide our own for `j()`
+        $kintExtension->setAliases(array_merge($kintExtension->getAliases(), [
+            'j' => ConsoleRenderer::class,
+        ]));
+
+        Craft::$app->getView()->registerTwigExtension(new Extension());
+        Craft::$app->getView()->registerTwigExtension($kintExtension);
     }
 }

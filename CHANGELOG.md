@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- Add the `j()` Twig function to log variables to the browser’s developer console. ([#7](https://github.com/verbb/kint/issues/7))
+
 ## 3.1.2 - 2025-07-18
 
 ### Changed
